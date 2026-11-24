@@ -26,29 +26,28 @@ const projects = [
     },
     tags: ["HTML", "CSS", "JavaScript", "i18n"],
     link: "",   // ссылка на работающий проект (если есть)
-    code: "",   // ссылка на код, например на GitHub (если есть)
+    code: "https://github.com/nikita-aidev/nikita-aidev.github.io",   // ссылка на код, например на GitHub (если есть)
   },
   {
     title: {
-      ru: "Скоро здесь",
-      en: "Coming soon",
-      de: "Bald hier",
-      es: "Próximamente",
-      fr: "Bientôt",
-      zh: "即将推出",
+      ru: "Telegram-бот визитка",
+      en: "Telegram business-card bot",
+      de: "Telegram-Visitenkarten-Bot",
+      es: "Bot de Telegram tarjeta de visita",
+      fr: "Bot Telegram carte de visite",
+      zh: "Telegram 名片机器人",
     },
     description: {
-      ru: "Следующий проект уже в работе.",
-      en: "The next project is already in progress.",
-      de: "Das nächste Projekt ist bereits in Arbeit.",
-      es: "El siguiente proyecto ya está en marcha.",
-      fr: "Le prochain projet est déjà en cours.",
-      zh: "下一个项目正在进行中。",
+      ru: "Бот рассказывает обо мне, показывает проекты и принимает заявки: задаёт три вопроса и сразу пересылает ответы мне. Работает в облаке круглосуточно.",
+      en: "The bot tells about me, shows my projects and collects requests: it asks three questions and instantly forwards the answers to me. Runs 24/7 in the cloud.",
+      de: "Der Bot stellt mich vor, zeigt meine Projekte und nimmt Anfragen an: Er stellt drei Fragen und leitet die Antworten sofort an mich weiter. Läuft rund um die Uhr in der Cloud.",
+      es: "El bot habla de mí, muestra mis proyectos y recibe solicitudes: hace tres preguntas y me reenvía las respuestas al instante. Funciona 24/7 en la nube.",
+      fr: "Le bot me présente, montre mes projets et reçoit les demandes : il pose trois questions et me transmet aussitôt les réponses. Il tourne 24 h/24 dans le cloud.",
+      zh: "机器人介绍我、展示我的项目并接收需求：提出三个问题，并立即把回答转发给我。全天候运行在云端。",
     },
-    soon: true, // заглушка — не считается в цифре «проектов в портфолио»
-    // Тег можно писать просто строкой ("Python") или переводить, как здесь
-    tags: [{ ru: "в процессе", en: "in progress", de: "in Arbeit", es: "en progreso", fr: "en cours", zh: "进行中" }],
-    link: "",
-    code: "",
+    // Тег можно писать просто строкой ("Python") или переводить
+    tags: ["Python", "aiogram", "Webhook", "Render"],
+    link: "https://t.me/nikita_aidev_bot",
+    code: "https://github.com/nikita-aidev/telegram-bot",
   },
 ];
