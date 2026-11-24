@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Никита — AI Engineer</title>
+  <meta name="description" content="Никита — AI Engineer. Портфолио, проекты и контакты.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <!-- Включаем сохранённую тему сразу, чтобы страница не мигала при загрузке -->
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Тексты с атрибутом data-i18n берутся из файла i18n.js -->
+
+  <!-- ===== Меню ===== -->
+  <nav class="nav">
+    <a href="#top" class="logo" data-i18n="name">Никита</a>
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav.about">Обо мне</a>
+      <a href="#services" data-i18n="nav.services">Услуги</a>
+      <a href="#projects" data-i18n="nav.projects">Проекты</a>
+      <a href="#contact" data-i18n="nav.contact">Контакты</a>
+      <select id="lang-switch" class="lang-switch" aria-label="Language">
+        <option value="ru">🌐 RU</option>
+        <option value="en">🌐 EN</option>
+        <option value="de">🌐 DE</option>
+        <option value="es">🌐 ES</option>
+        <option value="fr">🌐 FR</option>
+        <option value="zh">🌐 中文</option>
+      </select>
+      <button id="theme-toggle" class="icon-btn" aria-label="Theme">🌙</button>
+    </div>
+  </nav>
+
+  <!-- ===== Первый экран ===== -->
+  <div class="hero-wrap" id="top">
+    <div class="grid-bg"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header class="hero">
+      <div class="badge"><span class="dot"></span><span data-i18n="hero.badge">Открыт к предложениям</span></div>
+      <p class="hero-hello" data-i18n="hero.hello">Привет, я</p>
+      <h1 class="gradient-text" data-i18n="name">Никита</h1>
+      <p class="hero-role"><span class="typed" id="typed">AI Engineer</span><span class="cursor"></span></p>
+      <p class="hero-text" data-i18n="hero.text"></p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn" data-i18n="hero.btnProjects">Смотреть проекты</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">Связаться</a>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- ===== Обо мне + цифры ===== -->
+    <section id="about" class="section reveal">
+      <h2 data-i18n="nav.about">Обо мне</h2>
+      <p data-i18n="about.p1"></p>
+      <p data-i18n="about.p2"></p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num gradient-text" id="stat-projects" data-count="1">0</div>
+          <div class="stat-label" id="stat-projects-label">проект в портфолио</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num gradient-text" id="stat-tech" data-count="7">0</div>
+          <div class="stat-label" data-i18n="stats.tech">технологий</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num gradient-text">∞</div>
+          <div class="stat-label" data-i18n="stats.drive">желания расти</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Услуги ===== -->
+    <section id="services" class="section">
+      <h2 class="reveal" data-i18n="services.title">Что я делаю</h2>
+      <div class="services">
+        <div class="service reveal">
+          <div class="service-icon">🤖</div>
+          <h3 data-i18n="services.s1.t"></h3>
+          <p data-i18n="services.s1.d"></p>
+        </div>
+        <div class="service reveal">
+          <div class="service-icon">⚡</div>
+          <h3 data-i18n="services.s2.t"></h3>
+          <p data-i18n="services.s2.d"></p>
+        </div>
+        <div class="service reveal">
+          <div class="service-icon">🌐</div>
+          <h3 data-i18n="services.s3.t"></h3>
+          <p data-i18n="services.s3.d"></p>
+        </div>
+        <div class="service reveal">
+          <div class="service-icon">🧠</div>
+          <h3 data-i18n="services.s4.t"></h3>
+          <p data-i18n="services.s4.d"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Навыки ===== -->
+    <section id="skills" class="section reveal">
+      <h2 data-i18n="nav.skills">Навыки</h2>
+      <ul class="skills">
+        <li data-i18n="skills.ai">AI-инженерия</li>
+        <li data-i18n="skills.llm">LLM и промпт-инжиниринг</li>
+        <li>Claude / Claude Code</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li data-i18n="skills.htmlcss">HTML и CSS</li>
+        <li data-i18n="skills.git">Git и GitHub</li>
+      </ul>
+    </section>
+
+    <!-- ===== Как я работаю ===== -->
+    <section id="process" class="section">
+      <h2 class="reveal" data-i18n="process.title">Как я работаю</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num gradient-text">01</div>
+          <h3 data-i18n="process.p1.t"></h3>
+          <p data-i18n="process.p1.d"></p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num gradient-text">02</div>
+          <h3 data-i18n="process.p2.t"></h3>
+          <p data-i18n="process.p2.d"></p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num gradient-text">03</div>
+          <h3 data-i18n="process.p3.t"></h3>
+          <p data-i18n="process.p3.d"></p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num gradient-text">04</div>
+          <h3 data-i18n="process.p4.t"></h3>
+          <p data-i18n="process.p4.d"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Проекты (карточки берутся из projects.js) ===== -->
+    <section id="projects" class="section reveal">
+      <h2 data-i18n="nav.projects">Проекты</h2>
+      <div class="projects" id="projects-list"></div>
+    </section>
+
+    <!-- ===== Контакты ===== -->
+    <section id="contact" class="section reveal">
+      <div class="contact-box">
+        <h2 data-i18n="contact.title">Давайте сделаем что-то крутое</h2>
+        <p data-i18n="contact.text"></p>
+        <div class="contact-links">
+          <a href="https://t.me/NisaYere" target="_blank" class="btn">Telegram</a>
+          <a href="https://github.com/nikita-aidev" target="_blank" class="btn btn-outline">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> <span data-i18n="name">Никита</span> · AI Engineer
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
