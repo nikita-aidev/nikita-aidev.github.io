@@ -341,6 +341,17 @@ a:hover { color: var(--accent-hover); }
   color: var(--accent);
 }
 .card-links { margin-top: 16px; display: flex; gap: 16px; }
+.card-soon { border-style: dashed; }
+.soon-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
 
 /* ===== Контакты ===== */
 .contact-box {

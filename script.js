@@ -39,7 +39,7 @@ function renderProjects(lang) {
 
   projects.forEach((p) => {
     const card = document.createElement("article");
-    card.className = "card";
+    card.className = p.soon ? "card card-soon" : "card";
 
     const tags = p.tags.map((tag) => `<span class="tag">${pick(tag, lang)}</span>`).join("");
 
@@ -48,6 +48,7 @@ function renderProjects(lang) {
     if (p.code) links += `<a href="${p.code}" target="_blank">${t["projects.code"]}</a>`;
 
     card.innerHTML = `
+      ${p.soon ? `<span class="soon-badge">${t["projects.soon"]}</span>` : ""}
       <h3>${pick(p.title, lang)}</h3>
       <p>${pick(p.description, lang)}</p>
       <div class="tags">${tags}</div>
